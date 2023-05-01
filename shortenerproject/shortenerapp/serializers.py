@@ -1,11 +1,11 @@
-import uuid
 from rest_framework import serializers
+
+import uuid
 
 from .models import Url
 
 
 class UrlListSerializer(serializers.ModelSerializer):
-    #link=serializers.URLField(write_only=True)
     class Meta:
         model = Url
         fields = ('link', 'uuid',)
