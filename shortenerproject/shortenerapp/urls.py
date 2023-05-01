@@ -10,5 +10,6 @@ from .views import (
 urlpatterns = [
     #path('', index, name='index'),
     path('shorten/', UrlShortener.as_view()),
-    path('<str:pk>/', Urllong.as_view(), name='redirect_to_url'),
+    path('shorten/<str:pk>/', Urllong.as_view(), name='redirect_to_url'),
+
 ]
